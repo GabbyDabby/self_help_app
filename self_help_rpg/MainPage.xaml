@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="self_help_rpg.MainPage"
+             Title=""
+             NavigationPage.HasNavigationBar="False">
+
+    <VerticalStackLayout
+        Padding="20, 0, 20, 0">
+        <Label
+            Text="Welcome to Self Help RPG!"
+            Padding="0, 20, 0, 20"
+            FontSize="30"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+
+        <Entry
+            x:Name="NameEntry"
+            Placeholder="Enter Your Name Here"
+            PlaceholderColor="Pink"
+            HorizontalTextAlignment="Center"
+            FontSize="30">
+        </Entry>
+
+        <Label
+            Text="Create Your Character"
+            Padding="0, 20, 0, 0"
+            FontSize="30"
+            HorizontalOptions="Center">
+        </Label>
+        <Grid
+            Padding="0, 30, 0, 30">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+            <ImageButton
+                x:Name="MaleButton"
+                Source="gal.png"
+                Grid.Column="0"/>
+            <ImageButton
+                x:Name="FemaleButton"
+                Source="gal.png" 
+                Grid.Column="1"/>
+        </Grid>
+        <Grid
+            Padding="0, 0, 0, 30">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="100"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="100"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+            
+            <ImageButton
+                x:Name="FemaleH1Button"
+                Source="gal.png" 
+                Grid.Column="0"
+                Grid.Row="0"/>
+            <ImageButton
+                x:Name="FemaleH2Button"
+                Source="gal.png" 
+                Grid.Column="1"
+                Grid.Row="0"/>
+            <ImageButton
+                x:Name="FemaleH3Button"
+                Source="gal.png" 
+                Grid.Column="2"
+                Grid.Row="0"/>
+            <ImageButton
+                x:Name="FemaleH4Button"
+                Source="gal.png" 
+                Grid.Column="3"
+                Grid.Row="0"/>
+            <ImageButton
+                x:Name="FemaleH5Button"
+                Source="gal.png" 
+                Grid.Column="4"
+                Grid.Row="0"/>
+            <ImageButton
+                x:Name="MaleH1Button"
+                Source="gal.png" 
+                Grid.Column="0"
+                Grid.Row="2"/>
+            <ImageButton
+                x:Name="MaleH2Button"
+                Source="gal.png" 
+                Grid.Column="1"
+                Grid.Row="2"/>
+            <ImageButton
+                x:Name="MaleH3Button"
+                Source="gal.png" 
+                Grid.Column="2"
+                Grid.Row="2"/>
+            <ImageButton
+                x:Name="MaleH4Button"
+                Source="gal.png" 
+                Grid.Column="3"
+                Grid.Row="2"/>
+            <ImageButton
+                x:Name="MaleH5Button"
+                Source="gal.png" 
+                Grid.Column="4"
+                Grid.Row="2"/>
+
+        </Grid>
+        <Button
+            x:Name="ContinueButton"
+            Clicked="ContinueButton_Clicked"
+            Text="Continue"
+            FontSize="40"
+            >
+            
+        </Button>
+    </VerticalStackLayout>
+
+</ContentPage>
