@@ -9,7 +9,7 @@
         Padding="20, 0, 20, 0">
         <Label
             Text="Welcome to Self Help RPG!"
-            Padding="0, 20, 0, 20"
+            Padding="0, 20, 0, 21"
             FontSize="30"
             HorizontalOptions="Center"
             VerticalOptions="Center" />
