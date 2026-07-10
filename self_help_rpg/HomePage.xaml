@@ -6,15 +6,16 @@
              NavigationPage.HasBackButton="False">
 
     <ScrollView>
-        <Grid>
+        <Grid
+            Padding="0, 0, 0, 0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="450"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="100"/>
-                <RowDefinition Height="20"/>
+                <RowDefinition Height="100"/>
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
 
@@ -29,7 +30,65 @@
                 Grid.Column="0" 
                 Grid.Row="0">
             </Label>
+            <HorizontalStackLayout
+                Grid.Row="1"
+                Grid.Column="0">
+                <Label
+                    x:Name="LevelLabel"
+                    Text="Level: 0"
+                    FontSize="40"
+                    VerticalOptions="Center"
+                    Padding="10, 0, 80, 0">
+                </Label>
+                <Image
+                    Source="goldstarcoin.png"
+                    HeightRequest="30">
+
+                </Image>
+                <Label
+                    x:Name="GoldLabel"
+                    Text="100000"
+                    FontSize="40"
+                    VerticalOptions="Center">
+
+                </Label>
+            </HorizontalStackLayout>
+            <Grid
+                Grid.Row="2"
+                Grid.Column="0"
+                Padding="20, 0, 20, 0">
+                <Border Stroke="DarkSlateGray"
+        StrokeThickness="2"
+        BackgroundColor="LightGray"
+        HeightRequest="24"
+        HorizontalOptions="Fill">
+
+                    <!-- This gives the entire bar rounded corners -->
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="50"/>
+                    </Border.StrokeShape>
+
+                    <!-- The actual filling bar -->
+                    <Grid HorizontalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <!-- Bind or update the Width proportionally via Grid columns -->
+                            <!-- e.g., 60% progress is 0.6*, 40% empty is 0.4* -->
+                            <ColumnDefinition Width="0.6*"/>
+                            <ColumnDefinition Width="0.4*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- The filled color portion -->
+                        <BoxView Grid.Column="0" 
+                 Color="DeepSkyBlue" 
+                 HorizontalOptions="Fill" 
+                 VerticalOptions="Fill"/>
+                    </Grid>
+                </Border>
+
+            </Grid>
+            
         </Grid>
+
     </ScrollView>
 
 </ContentPage>

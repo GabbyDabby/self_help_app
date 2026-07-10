@@ -11,7 +11,7 @@
             InitializeComponent();
         }
 
-        private async void ContinueButton_Clicked(object sender, EventArgs e)
+        private void ContinueButton_Clicked(object sender, EventArgs e)
         {
             GameData.PlayerName = NameEntry.Text;
 
