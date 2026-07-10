@@ -16,7 +16,7 @@
             GameData.PlayerName = NameEntry.Text;
 
             // Navigate to the HomePage
-            await Navigation.PushAsync(new HomePage());
+            Application.Current.Windows[0].Page = new HomePage();
 
         }
     }
