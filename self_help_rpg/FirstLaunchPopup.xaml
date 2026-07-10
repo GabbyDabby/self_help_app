@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="self_help_rpg.FirstLaunchPopup"
+             Title="FirstLaunchPopup"
+             BackgroundColor="Purple">
+    <Grid
+        HorizontalOptions="Center"
+        Padding="0, 20, 0, 0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="320"/>
+            <RowDefinition Height="320"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Label 
+            Text="Thanks for joining us!"
+            FontSize="35"
+            FontFamily="VarelaRound-Regular"
+            TextColor="Orange"
+            Grid.Row="0"/>
+        <Image
+            Source="oldman.png"
+            Grid.Row="2">
+            
+        </Image>
+        <Image
+            Source="speechbubble.png"
+            Grid.Row="1">
+            
+        </Image>
+        <Label
+            Text="Congratulations on taking the first step. Even the tallest mountains are climbed one step at a time.
+Your journey won't always be easy, but remember—you don't have to become your best self overnight. Just become a little better than yesterday."
+            Grid.Row="1"
+            VerticalOptions="Center"
+            Padding="0, 0, 0, 60"
+            FontSize="15"
+            FontFamily="VarelaRound-Regular"
+            WidthRequest="250">
+            
+        </Label>
+        <Button
+            x:Name="NextButton"
+            Text=">"
+            FontSize="30"
+            BackgroundColor="Orange"
+            Grid.Row="3"
+            WidthRequest="60"
+            HeightRequest="60"
+            HorizontalOptions="End"
+            VerticalOptions="End">
+            
+        </Button>
+    </Grid>
+</ContentPage>

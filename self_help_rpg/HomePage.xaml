@@ -16,7 +16,7 @@
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="100"/>
-                <RowDefinition Height="20"/>
+                <RowDefinition Height="200"/>
             </Grid.RowDefinitions>
 
             <Label
@@ -57,35 +57,18 @@
                 Grid.Row="2"
                 Grid.Column="0"
                 Padding="20, 0, 20, 0">
-                <Border Stroke="DarkSlateGray"
-        StrokeThickness="2"
-        BackgroundColor="LightGray"
-        HeightRequest="24"
-        HorizontalOptions="Fill">
-
-                    <!-- This gives the entire bar rounded corners -->
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="50"/>
-                    </Border.StrokeShape>
-
-                    <!-- The actual filling bar -->
-                    <Grid HorizontalOptions="Fill">
-                        <Grid.ColumnDefinitions>
-                            <!-- Bind or update the Width proportionally via Grid columns -->
-                            <!-- e.g., 60% progress is 0.6*, 40% empty is 0.4* -->
-                            <ColumnDefinition Width="0.6*"/>
-                            <ColumnDefinition Width="0.4*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <!-- The filled color portion -->
-                        <BoxView Grid.Column="0" 
-                 Color="DeepSkyBlue" 
-                 HorizontalOptions="Fill" 
-                 VerticalOptions="Fill"/>
-                    </Grid>
-                </Border>
-
+                <ProgressBar
+                    x:Name="ExpProgressBar"
+                    Progress="0.5"
+                    ScaleY="5"
+                    ProgressColor="Gold">
+                </ProgressBar>
             </Grid>
+            <Image
+                Source="gal.png"
+                Grid.Row="3">
+                
+            </Image>
             
         </Grid>
 
