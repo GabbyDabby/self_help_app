@@ -9,7 +9,8 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new DailyCheckInPopup());
+            return new Window(new ReturningUserPopup());
+
         }
     }
 }

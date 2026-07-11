@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="self_help_rpg.ReturningUserPopup"
+             Title="ReturningUserPopup"
+             BackgroundColor="Purple">
+    <Grid
+    HorizontalOptions="Center"
+    Padding="20, 20, 20, 0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="320"/>
+            <RowDefinition Height="320"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Label 
+            x:Name="TopText"
+        Text="Thanks for joining us!"
+        FontSize="35"
+        FontFamily="ArchivoBlack-Regular"
+        TextColor="Orange"
+        HorizontalTextAlignment="Center"
+        Grid.Row="0"/>
+        <Image
+        Source="oldman.png"
+        Grid.Row="2">
+
+        </Image>
+        <Image
+        Source="speechbubble.png"
+        Grid.Row="1">
+
+        </Image>
+        <Label
+        x:Name="IntroText"
+        Grid.Row="1"
+        HorizontalOptions="Center"
+        VerticalOptions="Start"
+        WidthRequest="255"
+        FontSize="18"
+        FontAttributes="Bold"
+        FontFamily="ArchivoBlack-Regular"
+        HorizontalTextAlignment="Center"/>
+        <Button
+        x:Name="NextButton"
+        Text=">"
+        FontSize="30"
+        FontFamily="ArchivoBlack-Regula"
+        BackgroundColor="Orange"
+        Grid.Row="3"
+        WidthRequest="60"
+        HeightRequest="60"
+        HorizontalOptions="End"
+        VerticalOptions="End">
+
+        </Button>
+    </Grid>
+</ContentPage>

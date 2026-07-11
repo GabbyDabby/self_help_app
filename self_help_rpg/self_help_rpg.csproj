@@ -71,13 +71,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="DailyCheckInPopup.xaml">
+	  <MauiXaml Update="Popups\DailyCheckInPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="FirstLaunchPopup.xaml">
+	  <MauiXaml Update="Popups\FirstLaunchPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Popups\ReturningUserPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
