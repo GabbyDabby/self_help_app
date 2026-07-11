@@ -16,5 +16,6 @@ namespace self_help_rpg
         public static int PlayerHealth = 100;
         public static int PlayerLevel = 0;
         public static int PlayerXP = 0;
+        public static int SigninStreak = 50;
     }
 }
