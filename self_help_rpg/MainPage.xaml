@@ -1,126 +1,125 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="self_help_rpg.MainPage"
              Title=""
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Purple">
 
-    <VerticalStackLayout
-        Padding="20, 0, 20, 0">
-        <Label
-            Text="Welcome to Self Help RPG!"
-            Padding="0, 20, 0, 20"
-            FontSize="30"
-            HorizontalOptions="Center"
-            VerticalOptions="Center" />
-
-        <Entry
-            x:Name="NameEntry"
-            Placeholder="Enter Your Name Here"
-            PlaceholderColor="Pink"
-            HorizontalTextAlignment="Center"
-            FontSize="30">
-        </Entry>
-
-        <Label
-            Text="Create Your Character"
-            Padding="0, 20, 0, 0"
-            FontSize="30"
-            HorizontalOptions="Center">
-        </Label>
+    <ScrollView>
         <Grid
-            Padding="0, 30, 0, 30">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="*"/>
+            Padding="20, 30, 20, 20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
-            </Grid.RowDefinitions>
-            <ImageButton
-                x:Name="MaleButton"
-                Source="gal.png"
-                Grid.Column="0"/>
-            <ImageButton
-                x:Name="FemaleButton"
-                Source="gal.png" 
-                Grid.Column="1"/>
-        </Grid>
-        <Grid
-            Padding="0, 0, 0, 30">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="100"/>
-                <RowDefinition Height="30"/>
                 <RowDefinition Height="100"/>
-			</Grid.RowDefinitions>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
-			</Grid.ColumnDefinitions>
-            
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="300"/>
+            </Grid.RowDefinitions>
+
+            <Label
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                Text="Let's get to know  each other!"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                FontSize="30"
+                FontFamily="ArchivoBlack-Regular"
+                TextColor="Orange"/>
+            <Entry
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                x:Name="NameEntry"
+                Placeholder="What's your name?"
+                BackgroundColor="MediumPurple"
+                FontSize="24"
+                HorizontalTextAlignment="Center"/>
+            <Label
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                Text="Create your avatar"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="30"
+                FontFamily="ArchivoBlack-Regular"
+                TextColor="Orange"/>
+            <HorizontalStackLayout
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Center"
+                ZIndex="2"
+                Spacing="2">
+                <Button
+                    x:Name="Pale"
+                    BackgroundColor="White"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="Pale_Clicked"/>
+                <Button
+                    x:Name="Beige"
+                    BackgroundColor="#F5DFD4"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="Beige_Clicked"/>
+                <Button
+                    x:Name="Pink"
+                    BackgroundColor="LightPink"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="Pink_Clicked"/>
+                <Button
+                    x:Name="Tan"
+                    BackgroundColor="#C19A7E"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="Tan_Clicked"/>
+                <Button
+                    x:Name="Coffee"
+                    BackgroundColor="#906852"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="Coffee_Clicked"/>
+                <Button
+                    x:Name="Espresso"
+                    BackgroundColor="#5E3f2E"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="Espresso_Clicked"/>
+                <Button
+                    x:Name="Dark"
+                    BackgroundColor="#3E2A1D"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="Dark_Clicked"/>
+                <Button
+                    x:Name="Black"
+                    BackgroundColor="Black"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="Black_Clicked"/>
+            </HorizontalStackLayout>
             <ImageButton
-                x:Name="FemaleH1Button"
-                Source="gal.png" 
+                x:Name="GirlButton"
+                Grid.Row="4"
                 Grid.Column="0"
-                Grid.Row="0"/>
+                Scale="1.5"
+                Source="girlbasedark.png"/>
             <ImageButton
-                x:Name="FemaleH2Button"
-                Source="gal.png" 
+                x:Name="BoyButton"
+                Grid.Row="4"
                 Grid.Column="1"
-                Grid.Row="0"/>
-            <ImageButton
-                x:Name="FemaleH3Button"
-                Source="gal.png" 
-                Grid.Column="2"
-                Grid.Row="0"/>
-            <ImageButton
-                x:Name="FemaleH4Button"
-                Source="gal.png" 
-                Grid.Column="3"
-                Grid.Row="0"/>
-            <ImageButton
-                x:Name="FemaleH5Button"
-                Source="gal.png" 
-                Grid.Column="4"
-                Grid.Row="0"/>
-            <ImageButton
-                x:Name="MaleH1Button"
-                Source="gal.png" 
-                Grid.Column="0"
-                Grid.Row="2"/>
-            <ImageButton
-                x:Name="MaleH2Button"
-                Source="gal.png" 
-                Grid.Column="1"
-                Grid.Row="2"/>
-            <ImageButton
-                x:Name="MaleH3Button"
-                Source="gal.png" 
-                Grid.Column="2"
-                Grid.Row="2"/>
-            <ImageButton
-                x:Name="MaleH4Button"
-                Source="gal.png" 
-                Grid.Column="3"
-                Grid.Row="2"/>
-            <ImageButton
-                x:Name="MaleH5Button"
-                Source="gal.png" 
-                Grid.Column="4"
-                Grid.Row="2"/>
+                Scale="1.5"
+                Source="girlbasedark.png"/>
+
+
 
         </Grid>
-        <Button
-            x:Name="ContinueButton"
-            Clicked="ContinueButton_Clicked"
-            Text="Continue"
-            FontSize="40"
-            >
-            
-        </Button>
-    </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>

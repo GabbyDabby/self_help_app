@@ -10,6 +10,7 @@ namespace self_help_rpg
     {
         public static string PlayerName = "Gab";
         public static string PlayerGender = "";
+        public static string PlayerSkin = "";
         public static string PlayerHair = "";
         public static int PlayerGold = 0;
         public static int PlayerStrength = 10;
