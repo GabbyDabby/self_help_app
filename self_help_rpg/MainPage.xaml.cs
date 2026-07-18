@@ -21,6 +21,7 @@
         {
             GameData.PlayerSkin = "White";
             GirlButton.Source = "girlbase1";
+            BoyButton.Source = "boybase1";
 
         }
 
@@ -28,6 +29,7 @@
         {
             GameData.PlayerSkin = "Beige";
             GirlButton.Source = "girlbase2";
+            BoyButton.Source = "boybase2";
 
         }
 
@@ -35,36 +37,42 @@
         {
             GameData.PlayerSkin = "Pink";
             GirlButton.Source = "girlbase3";
+            BoyButton.Source = "boybase3";
         }
 
         private void Tan_Clicked(object sender, EventArgs e)
         {
             GameData.PlayerSkin = "Tan";
             GirlButton.Source = "girlbase4";
+            BoyButton.Source = "boybase4";
         }
 
         private void Coffee_Clicked(object sender, EventArgs e)
         {
             GameData.PlayerSkin = "Coffee";
             GirlButton.Source = "girlbase5";
+            BoyButton.Source = "boybase5";
         }
 
         private void Espresso_Clicked(object sender, EventArgs e)
         {
             GameData.PlayerSkin = "Espresso";
             GirlButton.Source = "girlbase6";
+            BoyButton.Source = "boybase6";
         }
 
         private void Dark_Clicked(object sender, EventArgs e)
         {
             GameData.PlayerSkin = "Dark";
             GirlButton.Source = "girlbase7";
+            BoyButton.Source = "boybase7";
         }
 
         private void Black_Clicked(object sender, EventArgs e)
         {
             GameData.PlayerSkin = "Black";
             GirlButton.Source = "girlbase8";
+            BoyButton.Source = "boybase8";
         }
     }
 }

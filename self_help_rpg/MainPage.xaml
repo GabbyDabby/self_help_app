@@ -17,9 +17,12 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="300"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
 
             <Label
@@ -109,15 +112,111 @@
                 Grid.Row="4"
                 Grid.Column="0"
                 Scale="1.5"
-                Source="girlbasedark.png"/>
+                Source="girlbase4.png"/>
+            <Image
+                x:Name="girlface"
+                Source="girlface5.png"
+                Grid.Row="4"
+                Grid.Column="0"
+                Scale="1.5"
+                />
             <ImageButton
                 x:Name="BoyButton"
                 Grid.Row="4"
                 Grid.Column="1"
                 Scale="1.5"
-                Source="girlbasedark.png"/>
-
-
+                Source="boybase4.png"/>
+            <Label
+                Text="Choose your eye color"
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                FontSize="30"
+                TextColor="Orange"
+                FontFamily="ArchivoBlack-Regular"
+                HorizontalTextAlignment="Center"/>
+            <HorizontalStackLayout
+                Grid.Row="6"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Center"
+                ZIndex="2"
+                Spacing="2">
+                <Button
+                    x:Name="Blue"
+                    BackgroundColor="CornflowerBlue"
+                    BorderColor="Black"
+                    BorderWidth="2"/>
+                <Button
+                    x:Name="Brown"
+                    BackgroundColor="SaddleBrown"
+                    BorderColor="Black"
+                    BorderWidth="2"/>
+                <Button
+                    x:Name="Green"
+                    BackgroundColor="LightGreen"
+                    BorderColor="Black"
+                    BorderWidth="2"/>
+                <Button
+                    x:Name="PinkEye"
+                    BackgroundColor="Pink"
+                    BorderColor="Black"
+                    BorderWidth="2"/>
+                <Button
+                    x:Name="Purple"
+                    BackgroundColor="MediumPurple"
+                    BorderColor="Black"
+                    BorderWidth="2"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="7"
+                Grid.ColumnSpan="2"
+                Spacing="2"
+                VerticalOptions="Center">
+                <ImageButton
+                    x:Name="girlface1"
+                    WidthRequest="75"
+                    HeightRequest="75"
+                    Source="girlface1.png"
+                    BackgroundColor="MediumPurple"
+                    BorderWidth="2"
+                    BorderColor="Black"
+                    CornerRadius="5"/>
+                <ImageButton
+                    x:Name="girlface2"
+                    WidthRequest="75"
+                    HeightRequest="75"
+                    Source="girlface2.png"
+                    BackgroundColor="MediumPurple"
+                    BorderWidth="2"
+                    BorderColor="Black"
+                    CornerRadius="5"/>
+                <ImageButton
+                    x:Name="girlface3"
+                    WidthRequest="75"
+                    HeightRequest="75"
+                    Source="girlface3.png"
+                    BackgroundColor="MediumPurple"
+                    BorderWidth="2"
+                    BorderColor="Black"
+                    CornerRadius="5"/>
+                <ImageButton
+                    x:Name="girlface4"
+                    WidthRequest="75"
+                    HeightRequest="75"
+                    Source="girlface4.png"
+                    BackgroundColor="MediumPurple"
+                    BorderWidth="2"
+                    BorderColor="Black"
+                    CornerRadius="5"/>
+                <ImageButton
+                    x:Name="girlface5"
+                    WidthRequest="75"
+                    HeightRequest="75"
+                    Source="girlface5.png"
+                    BackgroundColor="MediumPurple"
+                    BorderWidth="2"
+                    BorderColor="Black"
+                    CornerRadius="5"/>
+            </HorizontalStackLayout>
 
         </Grid>
     </ScrollView>
