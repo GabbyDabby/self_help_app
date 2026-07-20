@@ -146,6 +146,12 @@
                     BorderColor="Black"
                     BorderWidth="2"/>
                 <Button
+                    x:Name="Grey"
+                    BackgroundColor="DimGrey"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    />
+                <Button
                     x:Name="Brown"
                     BackgroundColor="SaddleBrown"
                     BorderColor="Black"
@@ -173,8 +179,8 @@
                 VerticalOptions="Center">
                 <ImageButton
                     x:Name="girlface1"
-                    WidthRequest="75"
-                    HeightRequest="75"
+                    WidthRequest="100"
+                    HeightRequest="100"
                     Source="girlface1.png"
                     BackgroundColor="MediumPurple"
                     BorderWidth="2"
