@@ -115,7 +115,7 @@
                 Source="girlbase4.png"/>
             <Image
                 x:Name="girlface"
-                Source="girlface5.png"
+                Source="girlface5gr.png"
                 Grid.Row="4"
                 Grid.Column="0"
                 Scale="1.5"
@@ -144,84 +144,84 @@
                     x:Name="Blue"
                     BackgroundColor="CornflowerBlue"
                     BorderColor="Black"
-                    BorderWidth="2"/>
+                    BorderWidth="2"
+                    Clicked="Blue_Clicked"/>
                 <Button
                     x:Name="Grey"
                     BackgroundColor="DimGrey"
                     BorderColor="Black"
                     BorderWidth="2"
-                    />
+                    Clicked="Grey_Clicked"/>
                 <Button
                     x:Name="Brown"
                     BackgroundColor="SaddleBrown"
                     BorderColor="Black"
-                    BorderWidth="2"/>
+                    BorderWidth="2"
+                    Clicked="Brown_Clicked"/>
                 <Button
                     x:Name="Green"
                     BackgroundColor="LightGreen"
                     BorderColor="Black"
-                    BorderWidth="2"/>
+                    BorderWidth="2"
+                    Clicked="Green_Clicked"/>
                 <Button
                     x:Name="PinkEye"
                     BackgroundColor="Pink"
                     BorderColor="Black"
-                    BorderWidth="2"/>
+                    BorderWidth="2"
+                    Clicked="PinkEye_Clicked"/>
                 <Button
                     x:Name="Purple"
                     BackgroundColor="MediumPurple"
                     BorderColor="Black"
-                    BorderWidth="2"/>
+                    BorderWidth="2"
+                    Clicked="Purple_Clicked"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout
                 Grid.Row="7"
                 Grid.ColumnSpan="2"
-                Spacing="2"
-                VerticalOptions="Center">
+                VerticalOptions="Center"
+                BackgroundColor="AntiqueWhite">
                 <ImageButton
-                    x:Name="girlface1"
-                    WidthRequest="100"
-                    HeightRequest="100"
+                    x:Name="gf1button"
+                    HeightRequest="75"
+                    WidthRequest="75"
                     Source="girlface1.png"
-                    BackgroundColor="MediumPurple"
-                    BorderWidth="2"
                     BorderColor="Black"
-                    CornerRadius="5"/>
+                    BorderWidth="2"
+                    Clicked="gf1button_Clicked"/>
                 <ImageButton
-                    x:Name="girlface2"
-                    WidthRequest="75"
+                    x:Name="gf2button"
                     HeightRequest="75"
+                    WidthRequest="75"
                     Source="girlface2.png"
-                    BackgroundColor="MediumPurple"
-                    BorderWidth="2"
                     BorderColor="Black"
-                    CornerRadius="5"/>
-                <ImageButton
-                    x:Name="girlface3"
-                    WidthRequest="75"
-                    HeightRequest="75"
-                    Source="girlface3.png"
-                    BackgroundColor="MediumPurple"
                     BorderWidth="2"
-                    BorderColor="Black"
-                    CornerRadius="5"/>
+                    Clicked="gf2button_Clicked"/>
                 <ImageButton
-                    x:Name="girlface4"
-                    WidthRequest="75"
+                    x:Name="gf3button"
                     HeightRequest="75"
+                    WidthRequest="75"
+                    Source="girlface3close.png"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="gf3button_Clicked"/>
+                <ImageButton
+                    x:Name="gf4button"
+                    HeightRequest="75"
+                    WidthRequest="75"
                     Source="girlface4.png"
-                    BackgroundColor="MediumPurple"
-                    BorderWidth="2"
                     BorderColor="Black"
-                    CornerRadius="5"/>
+                    BorderWidth="2"
+                    Clicked="gf4button_Clicked"/>
                 <ImageButton
-                    x:Name="girlface5"
-                    WidthRequest="75"
+                    x:Name="gf5button"
                     HeightRequest="75"
+                    WidthRequest="75"
                     Source="girlface5.png"
-                    BackgroundColor="MediumPurple"
-                    BorderWidth="2"
                     BorderColor="Black"
-                    CornerRadius="5"/>
+                    BorderWidth="2"
+                    Clicked="gf5button_Clicked"/>
             </HorizontalStackLayout>
 
         </Grid>

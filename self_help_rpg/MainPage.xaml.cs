@@ -74,5 +74,82 @@
             GirlButton.Source = "girlbase8";
             BoyButton.Source = "boybase8";
         }
+
+        private void UpdateFace()
+        {
+            if (GameData.PlayerFace == "girlface3")
+            {
+                girlface.Source = "girlface3.png";
+                return;
+            }
+
+            girlface.Source = $"{GameData.PlayerFace}{GameData.PlayerEyecolor}.png";
+        }
+
+
+        private void Blue_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerEyecolor = "b";
+            UpdateFace();
+        }
+
+        private void Grey_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerEyecolor = "gr";
+            UpdateFace();
+        }
+
+        private void Brown_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerEyecolor = "br";
+            UpdateFace();
+        }
+
+        private void Green_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerEyecolor = "g";
+            UpdateFace();
+        }
+
+        private void PinkEye_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerEyecolor = "p";
+            UpdateFace();
+        }
+
+        private void Purple_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerEyecolor = "pr";
+            UpdateFace();
+        }
+
+        private void gf1button_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerFace = "girlface1";
+            UpdateFace();
+        }
+        private void gf2button_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerFace = "girlface2";
+            UpdateFace();
+        }
+
+        private void gf3button_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerFace = "girlface3";
+            UpdateFace();
+        }
+
+        private void gf4button_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerFace = "girlface4";
+            UpdateFace();
+        }
+
+        private void gf5button_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerFace = "girlface5";
+            UpdateFace();
+        }
     }
 }
