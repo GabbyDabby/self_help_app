@@ -23,6 +23,8 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
 
             <Label
@@ -112,7 +114,8 @@
                 Grid.Row="4"
                 Grid.Column="0"
                 Scale="1.5"
-                Source="girlbase4.png"/>
+                Source="girlbase4.png"
+                Clicked="GirlButton_Clicked"/>
             <Image
                 x:Name="girlface"
                 Source="girlface5gr.png"
@@ -120,12 +123,36 @@
                 Grid.Column="0"
                 Scale="1.5"
                 />
+            <Image
+                Grid.Row="4"
+                Grid.Column="0"
+                Source="underwear.png"
+                Scale="1.5"/>
+            <Image
+                Grid.Row="4"
+                Grid.Column="0"
+                Source="bra.png"
+                Scale="1.5"/>
+
             <ImageButton
                 x:Name="BoyButton"
                 Grid.Row="4"
                 Grid.Column="1"
                 Scale="1.5"
-                Source="boybase4.png"/>
+                Source="boybase4.png"
+                Clicked="BoyButton_Clicked"/>
+            <Image
+                Grid.Row="4"
+                Grid.Column="1"
+                Source="boxers.png"
+                Scale="1.5"/>
+            <Image
+                x:Name="boyface"
+                Source="boyface2gr.png"
+                Grid.Row="4"
+                Grid.Column="1"
+                Scale="1.5"
+                />
             <Label
                 Text="Choose your eye color"
                 Grid.Row="5"
@@ -223,6 +250,65 @@
                     BorderWidth="2"
                     Clicked="gf5button_Clicked"/>
             </HorizontalStackLayout>
+            <HorizontalStackLayout
+                Grid.Row="8"
+                Grid.ColumnSpan="2"
+                VerticalOptions="Center"
+                BackgroundColor="AntiqueWhite">
+                <ImageButton
+                    x:Name="bf1button"
+                    HeightRequest="75"
+                    WidthRequest="75"
+                    Source="boyface1close.png"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="bf1button_Clicked"/>
+                <ImageButton
+                    x:Name="bf2button"
+                    HeightRequest="75"
+                    WidthRequest="75"
+                    Source="boyface2.png"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="bf2button_Clicked"/>
+                <ImageButton
+                    x:Name="bf3button"
+                    HeightRequest="75"
+                    WidthRequest="75"
+                    Source="boyface3.png"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="bf3button_Clicked"/>
+                <ImageButton
+                    x:Name="bf4button"
+                    HeightRequest="75"
+                    WidthRequest="75"
+                    Source="boyface4.png"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="bf4button_Clicked"/>
+                <ImageButton
+                    x:Name="bf5button"
+                    HeightRequest="75"
+                    WidthRequest="75"
+                    Source="boyface5.png"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="bf5button_Clicked"/>
+            </HorizontalStackLayout>
+            <Button
+                x:Name="ContinueButton"
+                Grid.Column="1"
+                Grid.Row="9"
+                Text="Continue"
+                FontFamily="ArchivoBlack-Regular"
+                FontSize="25"
+                TextColor="Orange"
+                BackgroundColor="MediumPurple"
+                BorderWidth="2"
+                BorderColor="Orange"
+                CornerRadius="30"
+                Clicked="ContinueButton_Clicked"/>
 
         </Grid>
     </ScrollView>

@@ -17,73 +17,71 @@
 
         }
 
+        private void SetSkin(int skin)
+        {
+            GameData.PlayerSkin = skin;
+            GirlButton.Source = $"girlbase{skin}";
+            BoyButton.Source = $"boybase{skin}";
+        }
         private void Pale_Clicked(object sender, EventArgs e)
         {
-            GameData.PlayerSkin = "White";
-            GirlButton.Source = "girlbase1";
-            BoyButton.Source = "boybase1";
-
+            SetSkin(1);
         }
 
         private void Beige_Clicked(object sender, EventArgs e)
         {
-            GameData.PlayerSkin = "Beige";
-            GirlButton.Source = "girlbase2";
-            BoyButton.Source = "boybase2";
-
+            SetSkin(2);
         }
 
         private void Pink_Clicked(object sender, EventArgs e)
         {
-            GameData.PlayerSkin = "Pink";
-            GirlButton.Source = "girlbase3";
-            BoyButton.Source = "boybase3";
+            SetSkin(3);
         }
 
         private void Tan_Clicked(object sender, EventArgs e)
         {
-            GameData.PlayerSkin = "Tan";
-            GirlButton.Source = "girlbase4";
-            BoyButton.Source = "boybase4";
+            SetSkin(4);
         }
 
         private void Coffee_Clicked(object sender, EventArgs e)
         {
-            GameData.PlayerSkin = "Coffee";
-            GirlButton.Source = "girlbase5";
-            BoyButton.Source = "boybase5";
+            SetSkin(5);
         }
 
         private void Espresso_Clicked(object sender, EventArgs e)
         {
-            GameData.PlayerSkin = "Espresso";
-            GirlButton.Source = "girlbase6";
-            BoyButton.Source = "boybase6";
+            SetSkin(6);
         }
 
         private void Dark_Clicked(object sender, EventArgs e)
         {
-            GameData.PlayerSkin = "Dark";
-            GirlButton.Source = "girlbase7";
-            BoyButton.Source = "boybase7";
+            SetSkin(7);
         }
 
         private void Black_Clicked(object sender, EventArgs e)
         {
-            GameData.PlayerSkin = "Black";
-            GirlButton.Source = "girlbase8";
-            BoyButton.Source = "boybase8";
+            SetSkin(8);
         }
 
         private void UpdateFace()
         {
-            if (GameData.PlayerFace == "girlface3")
+            if (GameData.PlayerGirlFace == "girlface3")
             {
-                girlface.Source = "girlface3.png";
-                return;
+                girlface.Source = "girlface3";
+            }
+            else
+            {
+                girlface.Source = $"{GameData.PlayerGirlFace}{GameData.PlayerEyecolor}";
             }
 
-            girlface.Source = $"{GameData.PlayerFace}{GameData.PlayerEyecolor}.png";
+            if (GameData.PlayerBoyFace == "boyface1")
+            {
+                boyface.Source = "boyface1";
+            }
+            else
+            {
+                boyface.Source = $"{GameData.PlayerBoyFace}{GameData.PlayerEyecolor}";
+            }
         }
 
 
@@ -125,31 +123,77 @@
 
         private void gf1button_Clicked(object sender, EventArgs e)
         {
-            GameData.PlayerFace = "girlface1";
+            GameData.PlayerGirlFace = "girlface1";
             UpdateFace();
         }
         private void gf2button_Clicked(object sender, EventArgs e)
         {
-            GameData.PlayerFace = "girlface2";
+            GameData.PlayerGirlFace = "girlface2";
             UpdateFace();
         }
 
         private void gf3button_Clicked(object sender, EventArgs e)
         {
-            GameData.PlayerFace = "girlface3";
+            GameData.PlayerGirlFace = "girlface3";
             UpdateFace();
         }
 
         private void gf4button_Clicked(object sender, EventArgs e)
         {
-            GameData.PlayerFace = "girlface4";
+            GameData.PlayerGirlFace = "girlface4";
             UpdateFace();
         }
 
         private void gf5button_Clicked(object sender, EventArgs e)
         {
-            GameData.PlayerFace = "girlface5";
+            GameData.PlayerGirlFace = "girlface5";
             UpdateFace();
         }
+
+        private void bf1button_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerBoyFace = "boyface1";
+            UpdateFace();
+        }
+
+        private void bf2button_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerBoyFace = "boyface2";
+            UpdateFace();
+        }
+
+        private void bf3button_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerBoyFace = "boyface3";
+            UpdateFace();
+        }
+
+        private void bf4button_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerBoyFace = "boyface4";
+            UpdateFace();
+        }
+
+        private void bf5button_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerBoyFace = "boyface5";
+            UpdateFace();
+        }
+
+        private void BoyButton_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerGender = "Male";
+            GameData.PlayerBottom = "boxers.png";
+            GameData.PlayerTop = "shirtless.png";
+        }
+
+        private void GirlButton_Clicked(object sender, EventArgs e)
+        {
+            GameData.PlayerGender = "Female";
+            GameData.PlayerBottom = "underwear.png";
+            GameData.PlayerTop = "bra.png";
+        }
+
+        
     }
 }

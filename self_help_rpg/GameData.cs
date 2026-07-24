@@ -10,10 +10,13 @@ namespace self_help_rpg
     {
         public static string PlayerName = "Gab";
         public static string PlayerGender = "Female";
-        public static string PlayerSkin = "Beige";
+        public static int PlayerSkin = 3;
         public static string PlayerEyecolor = "gr";
-        public static string PlayerFace = "girlface1";
+        public static string PlayerGirlFace = "girlface1";
+        public static string PlayerBoyFace = "boyface1";
         public static string PlayerHair = "";
+        public static string PlayerTop = "";
+        public static string PlayerBottom = "";
         public static int PlayerGold = 0;
         public static int PlayerStrength = 10;
         public static int PlayerHealth = 100;

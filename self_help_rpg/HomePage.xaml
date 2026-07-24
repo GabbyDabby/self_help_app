@@ -15,8 +15,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="200"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="350"/>
             </Grid.RowDefinitions>
 
             <Label
@@ -65,11 +65,23 @@
                 </ProgressBar>
             </Grid>
             <Image
-                Source="gal.png"
-                Grid.Row="3">
-                
-            </Image>
-            
+                x:Name="CharacterBase"
+                Source="girlbase6.png"
+                Grid.Row="3"/>
+            <Image
+                x:Name="CharacterFace"
+                Source="girlface4b.png"
+                Grid.Row="3"/>
+            <Image
+                x:Name="top"
+                Grid.Row="3"
+                Source="shirtless.png"/>
+            <Image
+                x:Name="bottom"
+                Grid.Row="3"
+                Source="boxers.png"/>
+
+
         </Grid>
 
     </ScrollView>
