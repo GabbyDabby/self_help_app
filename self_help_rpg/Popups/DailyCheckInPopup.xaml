@@ -4,7 +4,9 @@
              x:Class="self_help_rpg.DailyCheckInPopup"
              Title="DailyCheckInPopup"
              BackgroundColor="Purple">
+
     <VerticalStackLayout>
+        
         <Label
             Text="Daily Streak"
             FontSize="40"

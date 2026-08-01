@@ -5,155 +5,211 @@
              x:Class="self_help_rpg.MainPage"
              Title=""
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="Purple">
+             BackgroundColor="AntiqueWhite">
+    <Grid>
 
-    <ScrollView>
-        <Grid
-            Padding="20, 30, 20, 20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="300"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
+        <Image
+            Source="appbkg.png"
+            Aspect="Fill"
+            ZIndex="0"/>
 
-            <Label
-                Grid.Row="0"
-                Grid.ColumnSpan="2"
-                Text="Let's get to know  each other!"
-                HorizontalTextAlignment="Center"
-                HorizontalOptions="Center"
-                FontSize="30"
-                FontFamily="ArchivoBlack-Regular"
-                TextColor="Orange"/>
-            <Entry
-                Grid.Row="1"
-                Grid.ColumnSpan="2"
-                x:Name="NameEntry"
-                Placeholder="What's your name?"
-                BackgroundColor="MediumPurple"
-                FontSize="24"
-                HorizontalTextAlignment="Center"/>
-            <Label
+        <ScrollView>
+
+            <Grid
+                Padding="20, 30, 20, 20"
+                RowSpacing="10">
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <Border
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    ZIndex="1"
+                    Background="#130f47"
+                    Stroke="#fce7c4">
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+
+                    <VerticalStackLayout
+                        Padding="20,8"
+                        Spacing="8">
+
+                        <!-- Label -->
+                        <HorizontalStackLayout
+                            Padding="-10,0,-5,0"
+                            Spacing="10">
+
+                            <Image
+                                Source="staricon.png"
+                                HeightRequest="15"
+                                WidthRequest="15"/>
+
+                            <Label
+                                Text="Your Name"
+                                FontSize="15"
+                                TextColor="#fce7c4"
+                                VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+
+
+                        <!-- Entry Box -->
+                        <Border
+                            Stroke="#fce7c4"
+                            BackgroundColor="White"
+                            StrokeThickness="2"
+                            HeightRequest="42">
+
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="7"/>
+                            </Border.StrokeShape>
+
+
+                            <Grid
+                                ColumnDefinitions="*,Auto"
+                                Padding="10,0"
+                                HeightRequest="55">
+
+                                <Entry
+                                    x:Name="NameEntry"
+                                    FontSize="28"
+                                    Text="Gabby"
+                                    FontFamily="ArchivoBlack-Regular"
+                                    TextColor="#130f47"
+                                    TranslationY="2"/>
+
+                                <Image
+                                    Grid.Column="1"
+                                    Source="staricon.png"
+                                    HeightRequest="20"
+                                    WidthRequest="20"
+                                    VerticalOptions="Center"/>
+
+                            </Grid>
+
+                        </Border>
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+                <HorizontalStackLayout
                 Grid.Row="2"
-                Grid.ColumnSpan="2"
-                Text="Create your avatar"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                HorizontalTextAlignment="Center"
-                FontSize="30"
-                FontFamily="ArchivoBlack-Regular"
-                TextColor="Orange"/>
-            <HorizontalStackLayout
-                Grid.Row="3"
                 Grid.ColumnSpan="2"
                 HorizontalOptions="Center"
                 ZIndex="2"
                 Spacing="2">
-                <Button
+                    <Button
                     x:Name="Pale"
                     BackgroundColor="White"
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="Pale_Clicked"/>
-                <Button
+                    <Button
                     x:Name="Beige"
                     BackgroundColor="#F5DFD4"
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="Beige_Clicked"/>
-                <Button
+                    <Button
                     x:Name="Pink"
                     BackgroundColor="LightPink"
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="Pink_Clicked"/>
-                <Button
+                    <Button
                     x:Name="Tan"
                     BackgroundColor="#C19A7E"
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="Tan_Clicked"/>
-                <Button
+                    <Button
                     x:Name="Coffee"
                     BackgroundColor="#906852"
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="Coffee_Clicked"/>
-                <Button
+                    <Button
                     x:Name="Espresso"
                     BackgroundColor="#5E3f2E"
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="Espresso_Clicked"/>
-                <Button
+                    <Button
                     x:Name="Dark"
                     BackgroundColor="#3E2A1D"
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="Dark_Clicked"/>
-                <Button
+                    <Button
                     x:Name="Black"
                     BackgroundColor="Black"
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="Black_Clicked"/>
-            </HorizontalStackLayout>
-            <ImageButton
+                </HorizontalStackLayout>
+                <ImageButton
                 x:Name="GirlButton"
                 Grid.Row="4"
                 Grid.Column="0"
                 Scale="1.5"
                 Source="girlbase4.png"
                 Clicked="GirlButton_Clicked"/>
-            <Image
+                <Image
                 x:Name="girlface"
                 Source="girlface5gr.png"
                 Grid.Row="4"
                 Grid.Column="0"
                 Scale="1.5"
                 />
-            <Image
+                <Image
                 Grid.Row="4"
                 Grid.Column="0"
                 Source="underwear.png"
                 Scale="1.5"/>
-            <Image
+                <Image
                 Grid.Row="4"
                 Grid.Column="0"
                 Source="bra.png"
                 Scale="1.5"/>
 
-            <ImageButton
+                <ImageButton
                 x:Name="BoyButton"
                 Grid.Row="4"
                 Grid.Column="1"
                 Scale="1.5"
                 Source="boybase4.png"
                 Clicked="BoyButton_Clicked"/>
-            <Image
+                <Image
                 Grid.Row="4"
                 Grid.Column="1"
                 Source="boxers.png"
                 Scale="1.5"/>
-            <Image
+                <Image
                 x:Name="boyface"
                 Source="boyface2gr.png"
                 Grid.Row="4"
                 Grid.Column="1"
                 Scale="1.5"
                 />
-            <Label
+                <Label
                 Text="Choose your eye color"
                 Grid.Row="5"
                 Grid.ColumnSpan="2"
@@ -161,55 +217,55 @@
                 TextColor="Orange"
                 FontFamily="ArchivoBlack-Regular"
                 HorizontalTextAlignment="Center"/>
-            <HorizontalStackLayout
+                <HorizontalStackLayout
                 Grid.Row="6"
                 Grid.ColumnSpan="2"
                 HorizontalOptions="Center"
                 ZIndex="2"
                 Spacing="2">
-                <Button
+                    <Button
                     x:Name="Blue"
                     BackgroundColor="CornflowerBlue"
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="Blue_Clicked"/>
-                <Button
+                    <Button
                     x:Name="Grey"
                     BackgroundColor="DimGrey"
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="Grey_Clicked"/>
-                <Button
+                    <Button
                     x:Name="Brown"
                     BackgroundColor="SaddleBrown"
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="Brown_Clicked"/>
-                <Button
+                    <Button
                     x:Name="Green"
                     BackgroundColor="LightGreen"
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="Green_Clicked"/>
-                <Button
+                    <Button
                     x:Name="PinkEye"
                     BackgroundColor="Pink"
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="PinkEye_Clicked"/>
-                <Button
+                    <Button
                     x:Name="Purple"
                     BackgroundColor="MediumPurple"
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="Purple_Clicked"/>
-            </HorizontalStackLayout>
-            <HorizontalStackLayout
+                </HorizontalStackLayout>
+                <HorizontalStackLayout
                 Grid.Row="7"
                 Grid.ColumnSpan="2"
                 VerticalOptions="Center"
                 BackgroundColor="AntiqueWhite">
-                <ImageButton
+                    <ImageButton
                     x:Name="gf1button"
                     HeightRequest="75"
                     WidthRequest="75"
@@ -217,7 +273,7 @@
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="gf1button_Clicked"/>
-                <ImageButton
+                    <ImageButton
                     x:Name="gf2button"
                     HeightRequest="75"
                     WidthRequest="75"
@@ -225,7 +281,7 @@
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="gf2button_Clicked"/>
-                <ImageButton
+                    <ImageButton
                     x:Name="gf3button"
                     HeightRequest="75"
                     WidthRequest="75"
@@ -233,7 +289,7 @@
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="gf3button_Clicked"/>
-                <ImageButton
+                    <ImageButton
                     x:Name="gf4button"
                     HeightRequest="75"
                     WidthRequest="75"
@@ -241,7 +297,7 @@
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="gf4button_Clicked"/>
-                <ImageButton
+                    <ImageButton
                     x:Name="gf5button"
                     HeightRequest="75"
                     WidthRequest="75"
@@ -249,13 +305,13 @@
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="gf5button_Clicked"/>
-            </HorizontalStackLayout>
-            <HorizontalStackLayout
+                </HorizontalStackLayout>
+                <HorizontalStackLayout
                 Grid.Row="8"
                 Grid.ColumnSpan="2"
                 VerticalOptions="Center"
                 BackgroundColor="AntiqueWhite">
-                <ImageButton
+                    <ImageButton
                     x:Name="bf1button"
                     HeightRequest="75"
                     WidthRequest="75"
@@ -263,7 +319,7 @@
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="bf1button_Clicked"/>
-                <ImageButton
+                    <ImageButton
                     x:Name="bf2button"
                     HeightRequest="75"
                     WidthRequest="75"
@@ -271,7 +327,7 @@
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="bf2button_Clicked"/>
-                <ImageButton
+                    <ImageButton
                     x:Name="bf3button"
                     HeightRequest="75"
                     WidthRequest="75"
@@ -279,7 +335,7 @@
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="bf3button_Clicked"/>
-                <ImageButton
+                    <ImageButton
                     x:Name="bf4button"
                     HeightRequest="75"
                     WidthRequest="75"
@@ -287,7 +343,7 @@
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="bf4button_Clicked"/>
-                <ImageButton
+                    <ImageButton
                     x:Name="bf5button"
                     HeightRequest="75"
                     WidthRequest="75"
@@ -295,8 +351,8 @@
                     BorderColor="Black"
                     BorderWidth="2"
                     Clicked="bf5button_Clicked"/>
-            </HorizontalStackLayout>
-            <Button
+                </HorizontalStackLayout>
+                <Button
                 x:Name="ContinueButton"
                 Grid.Column="1"
                 Grid.Row="9"
@@ -310,7 +366,11 @@
                 CornerRadius="30"
                 Clicked="ContinueButton_Clicked"/>
 
-        </Grid>
-    </ScrollView>
+            </Grid>
+        </ScrollView>
+
+    </Grid>
+
+
 
 </ContentPage>
