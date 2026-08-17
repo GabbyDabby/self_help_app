@@ -13,15 +13,107 @@
             GameData.PlayerName = NameEntry.Text;
 
             // Navigate to the HomePage
-            Application.Current.Windows[0].Page = new HomePage();
+            Application.Current.Windows[0].Page = new MainPage2();
 
+        }
+
+        private void ResetSkinBorders()
+        {
+            PaleBorder.Stroke = Color.FromArgb("#fce7c4");
+            BeigeBorder.Stroke = Color.FromArgb("#fce7c4");
+            PinkBorder.Stroke = Color.FromArgb("#fce7c4");
+            TanBorder.Stroke = Color.FromArgb("#fce7c4");
+            CoffeeBorder.Stroke = Color.FromArgb("#fce7c4");
+            EspressoBorder.Stroke = Color.FromArgb("#fce7c4");
+            DarkBorder.Stroke = Color.FromArgb("#fce7c4");
+            BlackBorder.Stroke = Color.FromArgb("#fce7c4");
+
+            PaleBorder.StrokeThickness = 1;
+            BeigeBorder.StrokeThickness = 1;
+            PinkBorder.StrokeThickness = 1;
+            TanBorder.StrokeThickness = 1;
+            CoffeeBorder.StrokeThickness = 1;
+            EspressoBorder.StrokeThickness = 1;
+            DarkBorder.StrokeThickness = 1;
+            BlackBorder.StrokeThickness = 1;
+        }
+
+        private void ResetBodyBorders()
+        {
+            BoySelectBorder.Stroke = Color.FromArgb("#fce7c4");
+            GirlSelectBorder.Stroke = Color.FromArgb("#fce7c4");
+
+            BoySelectBorder.StrokeThickness = 1;
+            GirlSelectBorder.StrokeThickness = 1;
+        }
+
+        private void SetBody(string gender)
+        {
+            ResetBodyBorders();
+
+            if (gender == "Male")
+            {
+                BoySelectBorder.Stroke = Color.FromArgb("#FFD700");
+                BoySelectBorder.StrokeThickness = 2;
+            }
+            else if (gender == "Female")
+            {
+                GirlSelectBorder.Stroke = Color.FromArgb("#FFD700");
+                GirlSelectBorder.StrokeThickness = 2;
+            }
         }
 
         private void SetSkin(int skin)
         {
             GameData.PlayerSkin = skin;
-            GirlButton.Source = $"girlbase{skin}";
-            BoyButton.Source = $"boybase{skin}";
+
+            girlbody.Source = $"girlbase{skin}";
+            boybody.Source = $"boybase{skin}";
+
+            ResetSkinBorders();
+
+            switch (skin)
+            {
+                case 1:
+                    PaleBorder.Stroke = Color.FromArgb("#FFD700");
+                    PaleBorder.StrokeThickness = 2;
+                    break;
+
+                case 2:
+                    BeigeBorder.Stroke = Color.FromArgb("#FFD700");
+                    BeigeBorder.StrokeThickness = 2;
+                    break;
+
+                case 3:
+                    PinkBorder.Stroke = Color.FromArgb("#FFD700");
+                    PinkBorder.StrokeThickness = 2;
+                    break;
+
+                case 4:
+                    TanBorder.Stroke = Color.FromArgb("#FFD700");
+                    TanBorder.StrokeThickness = 2;
+                    break;
+
+                case 5:
+                    CoffeeBorder.Stroke = Color.FromArgb("#FFD700");
+                    CoffeeBorder.StrokeThickness = 2;
+                    break;
+
+                case 6:
+                    EspressoBorder.Stroke = Color.FromArgb("#FFD700");
+                    EspressoBorder.StrokeThickness = 2;
+                    break;
+
+                case 7:
+                    DarkBorder.Stroke = Color.FromArgb("#FFD700");
+                    DarkBorder.StrokeThickness = 2;
+                    break;
+
+                case 8:
+                    BlackBorder.Stroke = Color.FromArgb("#FFD700");
+                    BlackBorder.StrokeThickness = 2;
+                    break;
+            }
         }
         private void Pale_Clicked(object sender, EventArgs e)
         {
@@ -185,6 +277,9 @@
             GameData.PlayerGender = "Male";
             GameData.PlayerBottom = "boxers.png";
             GameData.PlayerTop = "shirtless.png";
+
+            SetBody("Male");
+
         }
 
         private void GirlButton_Clicked(object sender, EventArgs e)
@@ -192,6 +287,9 @@
             GameData.PlayerGender = "Female";
             GameData.PlayerBottom = "underwear.png";
             GameData.PlayerTop = "bra.png";
+
+            SetBody("Female");
+
         }
 
         

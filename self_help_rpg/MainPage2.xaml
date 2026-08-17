@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="self_help_rpg.MainPage2"
+             Title=""
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="AntiqueWhite">
+    <Grid>
+        <!-- Background -->
+        <Image
+            Source="appbkg.png"
+            Aspect="Fill"/>
+
+        <!-- Main Grid -->
+        <Grid
+            Padding="20, 30, 20, 20"
+            RowSpacing="10">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="240"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="110"/>
+            </Grid.RowDefinitions>
+
+            <!-- Step Visual -->
+            <HorizontalStackLayout
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                Padding="0, 35, 0, 0"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+                <Image
+                    Source="step1.png"
+                    HeightRequest="40"/>
+                <Image
+                    Source="step2filled.png"
+                    HeightRequest="40"/>
+                <Image
+                    Source="step3empty.png"
+                    HeightRequest="40"/>
+            </HorizontalStackLayout>
+            <Label
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Text="Step 2 of 3"
+                FontFamily="ArchivoBlack-Regular"
+                FontSize="12"
+                TextColor="#8d6fab"/>
+
+            <!-- Character Border -->
+            <Border
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Margin="50, 0, 50, 0"
+                ZIndex="1"
+                Background="#39236c"
+                Stroke="#fce7c4">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Grid>
+                    <Image
+                        x:Name="CharacterBody"
+                        Source="girlbase5.png"
+                        Aspect="AspectFill"/>
+                    <Image
+                        x:Name="CharacterFace"
+                        Source="girlface1g.png"
+                        Aspect="AspectFill"/>
+                    <Image
+                        x:Name="CharacterTop"
+                        Source="bra.png"
+                        Aspect="AspectFill"/>
+                    <Image
+                        x:Name="CharacterBottoms"
+                        Source="underwear.png"
+                        Aspect="AspectFill"/>
+                    <Image
+                        x:Name="CharacterHair"
+                        Aspect="AspectFill"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -13,8 +13,6 @@
             Aspect="Fill"
             ZIndex="0"/>
 
-        <ScrollView>
-
             <Grid
                 Padding="20, 30, 20, 20"
                 RowSpacing="10">
@@ -25,23 +23,46 @@
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="100"/>
                     <RowDefinition Height="90"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="300"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="50"/>
-                </Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="240"/>
+                    <RowDefinition Height="120"/>
+                <RowDefinition Height="110"/>
+            </Grid.RowDefinitions>
 
+            <HorizontalStackLayout
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                Padding="0, 35, 0, 0"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+                <Image
+                    Source="step1.png"
+                    HeightRequest="40"/>
+                <Image
+                    Source="step2empty.png"
+                    HeightRequest="40"/>
+                <Image
+                    Source="step3empty.png"
+                    HeightRequest="40"/>
+            </HorizontalStackLayout>
+            <Label
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Text="Step 1 of 3"
+                FontFamily="ArchivoBlack-Regular"
+                FontSize="12"
+                TextColor="#8d6fab"/>
+
+            <!-- Name Entry Border -->
                 <Border
                     Grid.Row="1"
                     Grid.ColumnSpan="2"
                     ZIndex="1"
-                    Background="#130f47"
+                    Background="#39236c"
                     Stroke="#fce7c4">
 
                     <Border.StrokeShape>
@@ -89,10 +110,9 @@
 
                                 <Entry
                                     x:Name="NameEntry"
-                                    FontSize="28"
-                                    Text="Gabby"
+                                    FontSize="24"
                                     FontFamily="ArchivoBlack-Regular"
-                                    TextColor="#130f47"
+                                    TextColor="#39236c"
                                     TranslationY="2"/>
 
                                 <Image
@@ -110,264 +130,695 @@
 
                 </Border>
 
-                <HorizontalStackLayout
-                Grid.Row="2"
-                Grid.ColumnSpan="2"
-                HorizontalOptions="Center"
-                ZIndex="2"
-                Spacing="2">
-                    <Button
-                    x:Name="Pale"
-                    BackgroundColor="White"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="Pale_Clicked"/>
-                    <Button
-                    x:Name="Beige"
-                    BackgroundColor="#F5DFD4"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="Beige_Clicked"/>
-                    <Button
-                    x:Name="Pink"
-                    BackgroundColor="LightPink"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="Pink_Clicked"/>
-                    <Button
-                    x:Name="Tan"
-                    BackgroundColor="#C19A7E"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="Tan_Clicked"/>
-                    <Button
-                    x:Name="Coffee"
-                    BackgroundColor="#906852"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="Coffee_Clicked"/>
-                    <Button
-                    x:Name="Espresso"
-                    BackgroundColor="#5E3f2E"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="Espresso_Clicked"/>
-                    <Button
-                    x:Name="Dark"
-                    BackgroundColor="#3E2A1D"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="Dark_Clicked"/>
-                    <Button
-                    x:Name="Black"
-                    BackgroundColor="Black"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="Black_Clicked"/>
-                </HorizontalStackLayout>
-                <ImageButton
-                x:Name="GirlButton"
-                Grid.Row="4"
-                Grid.Column="0"
-                Scale="1.5"
-                Source="girlbase4.png"
-                Clicked="GirlButton_Clicked"/>
-                <Image
-                x:Name="girlface"
-                Source="girlface5gr.png"
-                Grid.Row="4"
-                Grid.Column="0"
-                Scale="1.5"
-                />
-                <Image
-                Grid.Row="4"
-                Grid.Column="0"
-                Source="underwear.png"
-                Scale="1.5"/>
-                <Image
-                Grid.Row="4"
-                Grid.Column="0"
-                Source="bra.png"
-                Scale="1.5"/>
+                <!-- Skin Tone Select -->
+                <Border
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    ZIndex="1"
+                    Background="#39236c"
+                    Stroke="#fce7c4">
 
-                <ImageButton
-                x:Name="BoyButton"
-                Grid.Row="4"
-                Grid.Column="1"
-                Scale="1.5"
-                Source="boybase4.png"
-                Clicked="BoyButton_Clicked"/>
-                <Image
-                Grid.Row="4"
-                Grid.Column="1"
-                Source="boxers.png"
-                Scale="1.5"/>
-                <Image
-                x:Name="boyface"
-                Source="boyface2gr.png"
-                Grid.Row="4"
-                Grid.Column="1"
-                Scale="1.5"
-                />
-                <Label
-                Text="Choose your eye color"
-                Grid.Row="5"
-                Grid.ColumnSpan="2"
-                FontSize="30"
-                TextColor="Orange"
-                FontFamily="ArchivoBlack-Regular"
-                HorizontalTextAlignment="Center"/>
-                <HorizontalStackLayout
-                Grid.Row="6"
-                Grid.ColumnSpan="2"
-                HorizontalOptions="Center"
-                ZIndex="2"
-                Spacing="2">
-                    <Button
-                    x:Name="Blue"
-                    BackgroundColor="CornflowerBlue"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="Blue_Clicked"/>
-                    <Button
-                    x:Name="Grey"
-                    BackgroundColor="DimGrey"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="Grey_Clicked"/>
-                    <Button
-                    x:Name="Brown"
-                    BackgroundColor="SaddleBrown"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="Brown_Clicked"/>
-                    <Button
-                    x:Name="Green"
-                    BackgroundColor="LightGreen"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="Green_Clicked"/>
-                    <Button
-                    x:Name="PinkEye"
-                    BackgroundColor="Pink"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="PinkEye_Clicked"/>
-                    <Button
-                    x:Name="Purple"
-                    BackgroundColor="MediumPurple"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="Purple_Clicked"/>
-                </HorizontalStackLayout>
-                <HorizontalStackLayout
-                Grid.Row="7"
-                Grid.ColumnSpan="2"
-                VerticalOptions="Center"
-                BackgroundColor="AntiqueWhite">
-                    <ImageButton
-                    x:Name="gf1button"
-                    HeightRequest="75"
-                    WidthRequest="75"
-                    Source="girlface1.png"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="gf1button_Clicked"/>
-                    <ImageButton
-                    x:Name="gf2button"
-                    HeightRequest="75"
-                    WidthRequest="75"
-                    Source="girlface2.png"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="gf2button_Clicked"/>
-                    <ImageButton
-                    x:Name="gf3button"
-                    HeightRequest="75"
-                    WidthRequest="75"
-                    Source="girlface3close.png"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="gf3button_Clicked"/>
-                    <ImageButton
-                    x:Name="gf4button"
-                    HeightRequest="75"
-                    WidthRequest="75"
-                    Source="girlface4.png"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="gf4button_Clicked"/>
-                    <ImageButton
-                    x:Name="gf5button"
-                    HeightRequest="75"
-                    WidthRequest="75"
-                    Source="girlface5.png"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="gf5button_Clicked"/>
-                </HorizontalStackLayout>
-                <HorizontalStackLayout
-                Grid.Row="8"
-                Grid.ColumnSpan="2"
-                VerticalOptions="Center"
-                BackgroundColor="AntiqueWhite">
-                    <ImageButton
-                    x:Name="bf1button"
-                    HeightRequest="75"
-                    WidthRequest="75"
-                    Source="boyface1close.png"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="bf1button_Clicked"/>
-                    <ImageButton
-                    x:Name="bf2button"
-                    HeightRequest="75"
-                    WidthRequest="75"
-                    Source="boyface2.png"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="bf2button_Clicked"/>
-                    <ImageButton
-                    x:Name="bf3button"
-                    HeightRequest="75"
-                    WidthRequest="75"
-                    Source="boyface3.png"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="bf3button_Clicked"/>
-                    <ImageButton
-                    x:Name="bf4button"
-                    HeightRequest="75"
-                    WidthRequest="75"
-                    Source="boyface4.png"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="bf4button_Clicked"/>
-                    <ImageButton
-                    x:Name="bf5button"
-                    HeightRequest="75"
-                    WidthRequest="75"
-                    Source="boyface5.png"
-                    BorderColor="Black"
-                    BorderWidth="2"
-                    Clicked="bf5button_Clicked"/>
-                </HorizontalStackLayout>
-                <Button
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+
+                    <VerticalStackLayout
+                        Padding="20,8"
+                        Spacing="8">
+
+                        <!-- Label -->
+                        <HorizontalStackLayout
+                            Padding="-10,0,-5,0"
+                            Spacing="10">
+
+                            <Image
+                                Source="paintpalate.png"
+                                HeightRequest="20"
+                                WidthRequest="20"/>
+
+                            <Label
+                                Text="Choose Your Skin Tone"
+                                FontSize="15"
+                                TextColor="#fce7c4"
+                                VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+
+
+                        <!-- Color Selections -->
+                        <HorizontalStackLayout
+                            HeightRequest="40"
+                            Padding="-12, 0, 0, 0"
+                            Spacing="5">
+
+                            <!-- Pale Selection -->
+                            <Border
+                                x:Name="PaleBorder"
+                                Stroke="#fce7c4"
+                                StrokeThickness="1"
+                                WidthRequest="40">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="25"/>
+                                </Border.StrokeShape>
+
+                                <Button
+                                    x:Name="Pale"
+                                    BackgroundColor="White"
+                                    Clicked="Pale_Clicked"/>
+                            </Border>
+
+                            <!-- Beige Selection -->
+                            <Border
+                                x:Name="BeigeBorder"
+                                Stroke="#fce7c4"
+                                StrokeThickness="1"
+                                WidthRequest="40">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="25"/>
+                                </Border.StrokeShape>
+
+                                <Button
+                                    x:Name="Beige"
+                                    BackgroundColor="#F5DFD4"
+                                    Clicked="Beige_Clicked"/>
+                            </Border>
+
+                            <!-- Pink Selection -->
+                            <Border
+                                x:Name="PinkBorder"
+                                Stroke="#fce7c4"
+                                StrokeThickness="1"
+                                WidthRequest="40">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="25"/>
+                                </Border.StrokeShape>
+
+                                <Button
+                                    x:Name="Pink"
+                                    BackgroundColor="LightPink"
+                                    Clicked="Pink_Clicked"/>
+                            </Border>
+
+                            <!-- Tan Selection -->
+                            <Border
+                                x:Name="TanBorder"
+                                Stroke="#fce7c4"
+                                StrokeThickness="1"
+                                WidthRequest="40">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="25"/>
+                                </Border.StrokeShape>
+
+                                <Button
+                                    x:Name="Tan"
+                                    BackgroundColor="#C19A7E"
+                                    Clicked="Tan_Clicked"/>
+                            </Border>
+
+                            <!-- Coffee Selection -->
+                            <Border
+                                x:Name="CoffeeBorder"
+                                Stroke="#fce7c4"
+                                StrokeThickness="1"
+                                WidthRequest="40">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="25"/>
+                                </Border.StrokeShape>
+
+                                <Button
+                                    x:Name="Coffee"
+                                    BackgroundColor="#906852"
+                                    Clicked="Coffee_Clicked"/>
+                            </Border>
+
+                            <!-- Espresso Selection -->
+                            <Border
+                                x:Name="EspressoBorder"
+                                Stroke="#fce7c4"
+                                StrokeThickness="1"
+                                WidthRequest="40">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="25"/>
+                                </Border.StrokeShape>
+
+                                <Button
+                                    x:Name="Espresso"
+                                    BackgroundColor="#5E3f2E"
+                                    Clicked="Espresso_Clicked"/>
+                            </Border>
+
+                            <!-- Dark Selection -->
+                            <Border
+                                x:Name="DarkBorder"
+                                Stroke="#fce7c4"
+                                StrokeThickness="1"
+                                WidthRequest="40">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="25"/>
+                                </Border.StrokeShape>
+
+                                <Button
+                                    x:Name="Dark"
+                                    BackgroundColor="#3E2A1D"
+                                    Clicked="Dark_Clicked"/>
+                            </Border>
+
+                            <!-- Black Selection -->
+                            <Border
+                                x:Name="BlackBorder"
+                                Stroke="#fce7c4"
+                                StrokeThickness="1"
+                                WidthRequest="40">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="25"/>
+                                </Border.StrokeShape>
+
+                                <Button
+                                    x:Name="Black"
+                                    BackgroundColor="Black"
+                                    Clicked="Black_Clicked"/>
+                            </Border>
+
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+
+                </Border>
+                
+                <!-- Body Selection Border -->
+                <Border
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    ZIndex="1"
+                    Background="#39236c"
+                    Stroke="#fce7c4">
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+
+                    <Grid
+                        ColumnSpacing="10"
+                        Padding="10, 2, 10, 10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Label -->
+                        <HorizontalStackLayout
+                            Grid.Row="0"
+                            Grid.ColumnSpan="2"
+                            Spacing="10">
+                            <Image
+                                Source="bodyicon.png"
+                                HeightRequest="20"
+                                WidthRequest="20"/>
+                            <Label
+                                Text="Choose Your Body"
+                                FontSize="15"
+                                TextColor="#fce7c4"
+                                VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+
+                        <!-- Girl Select Border -->
+                        <Border
+                            x:Name="GirlSelectBorder"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Stroke="#fce7c4"
+                            StrokeThickness="1">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="20"/>
+                            </Border.StrokeShape>
+
+                            <Button
+                                x:Name="GirlButton"
+                                BackgroundColor="Transparent"
+                                Clicked="GirlButton_Clicked"/>
+
+                        </Border>
+
+                        <!-- Girl Body -->
+                        <Image
+                            x:Name="girlbody"
+                            Source="girlbase4.png"
+                            Scale="1.2"
+                            Grid.Row="1"
+                            Grid.Column="0"/>
+                        <!-- Girl Face -->
+                        <Image
+                            x:Name="girlface"
+                            Source="girlface5gr.png"
+                            Scale="1.2"
+                            Grid.Row="1"
+                            Grid.Column="0"/>
+                        <!-- Girl Clothes -->
+                        <Image
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Scale="1.2"
+                            Source="underwear.png"/>
+                        <Image
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Scale="1.2"
+                           Source="bra.png"/>
+
+                        <!-- Boy Select Border -->
+                        <Border
+                            x:Name="BoySelectBorder"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Stroke="#fce7c4"
+                            StrokeThickness="1">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="20"/>
+                            </Border.StrokeShape>
+                            
+                            <Button
+                                x:Name="BoyButton"
+                                BackgroundColor="Transparent"
+                                Grid.Row="4"
+                                Grid.Column="1"
+                                Clicked="BoyButton_Clicked"/>
+                        </Border>
+
+                        <!-- Boy Body -->
+                        <Image
+                            x:Name="boybody"
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            Scale="1.2"
+                            Source="boybase4.png"/>
+                        <!-- Boy Clothes -->
+                        <Image
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            Scale="1.2"
+                            Source="boxers.png"/>
+
+                        <!-- Boy Face -->
+                        <Image
+                            x:Name="boyface"
+                            Source="boyface2gr.png"
+                            Scale="1.2"
+                            Grid.Row="4"
+                           Grid.Column="1"/>
+                    </Grid>
+                </Border>
+
+                <!-- Face Select Border -->
+                <Border
+                    Grid.Row="4"
+                    Grid.ColumnSpan="2"
+                    Background="#39236c"
+                    Stroke="#fce7c4">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+
+                    <Grid
+                        Padding="6"
+                        RowSpacing="6"
+                        ColumnSpacing="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="80"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Label -->
+                        <HorizontalStackLayout
+                            Grid.Row="0"
+                            Grid.ColumnSpan="2"
+                            Spacing="10">
+                            <Image
+                                Source="paintpalate.png"
+                                HeightRequest="20"
+                                WidthRequest="20"/>
+                            <Label
+                                Text="Customize Your Face"
+                                FontSize="15"
+                                TextColor="#fce7c4"
+                                VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+                        <!-- Eye Color select border -->
+                        <Border
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Background="#39236c"
+                            Stroke="#fce7c4"
+                            Padding="6">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="70"/>
+                                </Grid.RowDefinitions>
+                                <!-- Label -->
+                                <HorizontalStackLayout
+                                    Grid.Row="0"
+                                    Grid.ColumnSpan="2"
+                                    Spacing="6">
+                                    <Image
+                                        Source="eyeicon.png"
+                                        HeightRequest="15"
+                                        WidthRequest="15"/>
+                                    <Label
+                                        Text="Eye Color"
+                                        FontSize="12"
+                                        TextColor="#fce7c4"
+                                        VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout
+                                    Grid.Row="1"
+                                    Padding="0, 10, 0, 35"
+                                    Spacing="2">
+                                    <!-- Blue Selection -->
+                                    <Border
+                                    x:Name="BlueBorder"
+                                    Stroke="#fce7c4"
+                                    StrokeThickness="1"
+                                    WidthRequest="25">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="25"/>
+                                        </Border.StrokeShape>
+
+                                        <Button
+                                        x:Name="Blue"
+                                        BackgroundColor="CornflowerBlue"
+                                        Clicked="Blue_Clicked"/>
+                                    </Border>
+                                    <!-- Grey Selection -->
+                                    <Border
+                                    x:Name="GreyBorder"
+                                    Stroke="#fce7c4"
+                                    StrokeThickness="1"
+                                    WidthRequest="25">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="25"/>
+                                        </Border.StrokeShape>
+
+                                        <Button
+                                        x:Name="Grey"
+                                        BackgroundColor="DimGrey"
+                                        Clicked="Grey_Clicked"/>
+                                    </Border>
+                                    <!-- Brown Selection -->
+                                    <Border
+                                    x:Name="BrownBorder"
+                                    Stroke="#fce7c4"
+                                    StrokeThickness="1"
+                                    WidthRequest="25">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="25"/>
+                                        </Border.StrokeShape>
+
+                                        <Button
+                                        x:Name="Brown"
+                                        BackgroundColor="SaddleBrown"
+                                        Clicked="Brown_Clicked"/>
+                                    </Border>
+                                    <!-- Green Selection -->
+                                    <Border
+                                    x:Name="GreenBorder"
+                                    Stroke="#fce7c4"
+                                    StrokeThickness="1"
+                                    WidthRequest="25">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="25"/>
+                                        </Border.StrokeShape>
+
+                                        <Button
+                                        x:Name="Green"
+                                        BackgroundColor="LightGreen"
+                                        Clicked="Green_Clicked"/>
+                                    </Border>
+                                    <!-- Pink Selection -->
+                                    <Border
+                                    x:Name="PinkEyeBorder"
+                                    Stroke="#fce7c4"
+                                    StrokeThickness="1"
+                                    WidthRequest="25">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="25"/>
+                                        </Border.StrokeShape>
+
+                                        <Button
+                                        x:Name="PinkEye"
+                                        BackgroundColor="Pink"
+                                        Clicked="PinkEye_Clicked"/>
+                                    </Border>
+                                    <!-- Purple Selection -->
+                                    <Border
+                                    x:Name="PurpleBorder"
+                                    Stroke="#fce7c4"
+                                    StrokeThickness="1"
+                                    WidthRequest="25">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="25"/>
+                                        </Border.StrokeShape>
+
+                                        <Button
+                                        x:Name="Purple"
+                                        BackgroundColor="MediumPurple"
+                                        Clicked="Purple_Clicked"/>
+                                    </Border>
+                                </HorizontalStackLayout>
+                            </Grid>
+                        </Border>
+                        <!-- Face Select -->
+                        <Border
+                            Grid.RowSpan="2"
+                            Grid.Column="1"
+                            Background="#39236c"
+                            Stroke="#fce7c4"
+                            Padding="6">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Grid
+                                RowSpacing="3">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="40"/>
+                                </Grid.RowDefinitions>
+                                <!-- Label -->
+                                <HorizontalStackLayout
+                                    Grid.Row="0"
+                                    Spacing="6">
+                                    <Image
+                                        Source="starsicon.png"
+                                        HeightRequest="15"
+                                        WidthRequest="15"/>
+                                    <Label
+                                        Text="Face Style"
+                                        FontSize="12"
+                                        TextColor="#fce7c4"
+                                        VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+                                <!-- Face Options -->
+                                <ScrollView
+                                    Grid.Row="1"
+                                    Orientation="Horizontal"
+                                    HeightRequest="65"
+                                    VerticalOptions="Start"
+                                    BackgroundColor="AntiqueWhite">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="15"/>
+                                            <RowDefinition Height="55"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <!-- Feminine Label -->
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Text="Feminine"
+                                            HorizontalOptions="Center"
+                                            FontSize="10"
+                                            FontFamily="ArchivoBlack-Regular"
+                                            TextColor="#39236c"
+                                            VerticalOptions="Center"/>
+                                        <!-- Female Face 1 -->
+                                        <ImageButton
+                                            Grid.RowSpan="2"
+                                            Grid.Column="0"
+                                            x:Name="gf1button"
+                                            HeightRequest="70"
+                                            WidthRequest="70"
+                                            Source="girlface1.png"
+                                            BorderColor="Black"
+                                            BorderWidth="2"
+                                            Clicked="gf1button_Clicked"/>
+                                        <!-- Female Face 2 -->
+                                        <ImageButton
+                                            Grid.RowSpan="2"
+                                            Grid.Column="1"
+                                            x:Name="gf2button"
+                                            HeightRequest="70"
+                                            WidthRequest="70"
+                                            Source="girlface2.png"
+                                            BorderColor="Black"
+                                            BorderWidth="2"
+                                            Clicked="gf2button_Clicked"/>
+                                        <!-- Female Face 3 -->
+                                        <ImageButton
+                                            Grid.RowSpan="2"
+                                            Grid.Column="2"
+                                            x:Name="gf3button"
+                                            HeightRequest="70"
+                                            WidthRequest="70"
+                                            Source="girlface3close.png"
+                                            BorderColor="Black"
+                                            BorderWidth="2"
+                                            Clicked="gf3button_Clicked"/>
+                                        <!-- Female Face 4 -->
+                                        <ImageButton
+                                            Grid.RowSpan="2"
+                                            Grid.Column="3"
+                                            x:Name="gf4button"
+                                            HeightRequest="70"
+                                            WidthRequest="70"
+                                            Source="girlface4.png"
+                                            BorderColor="Black"
+                                            BorderWidth="2"
+                                            Clicked="gf4button_Clicked"/>
+                                        <!-- Female Face 5 -->
+                                        <ImageButton
+                                            Grid.RowSpan="2"
+                                            Grid.Column="4"
+                                            x:Name="gf5button"
+                                            HeightRequest="70"
+                                            WidthRequest="70"
+                                            Source="girlface5.png"
+                                            BorderColor="Black"
+                                            BorderWidth="2"
+                                            Clicked="gf5button_Clicked"/>
+                                        <!-- Masculine Label -->
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="5"
+                                            Text="Masculine"
+                                            HorizontalOptions="Center"
+                                            FontSize="10"
+                                            FontFamily="ArchivoBlack-Regular"
+                                            TextColor="#39236c"
+                                            VerticalOptions="Center"/>
+                                        <!-- Male Face 1 -->
+                                        <ImageButton
+                                            Grid.RowSpan="2"
+                                            Grid.Column="5"
+                                            x:Name="bf1button"
+                                            HeightRequest="70"
+                                            WidthRequest="70"
+                                            Source="boyface1close.png"
+                                            BorderColor="Black"
+                                            BorderWidth="2"
+                                            Clicked="bf1button_Clicked"/>
+                                        <!-- Male Face 2 -->
+                                        <ImageButton
+                                            Grid.RowSpan="2"
+                                            Grid.Column="6"
+                                            x:Name="bf2button"
+                                            HeightRequest="70"
+                                            WidthRequest="70"
+                                            Source="boyface2.png"
+                                            BorderColor="Black"
+                                            BorderWidth="2"
+                                            Clicked="bf2button_Clicked"/>
+                                        <!-- Male Face 3 -->
+                                        <ImageButton
+                                            Grid.RowSpan="2"
+                                            Grid.Column="7"
+                                            x:Name="bf3button"
+                                            HeightRequest="70"
+                                            WidthRequest="70"
+                                            Source="boyface3.png"
+                                            BorderColor="Black"
+                                            BorderWidth="2"
+                                            Clicked="bf3button_Clicked"/>
+                                        <!-- Male Face 4 -->
+                                        <ImageButton
+                                            Grid.RowSpan="2"
+                                            Grid.Column="8"
+                                            x:Name="bf4button"
+                                            HeightRequest="70"
+                                            WidthRequest="70"
+                                            Source="boyface4.png"
+                                            BorderColor="Black"
+                                            BorderWidth="2"
+                                            Clicked="bf4button_Clicked"/>
+                                        <!-- Male Face 5 -->
+                                        <ImageButton
+                                            Grid.RowSpan="2"
+                                            Grid.Column="9"
+                                            x:Name="bf5button"
+                                            HeightRequest="70"
+                                            WidthRequest="70"
+                                            Source="boyface5.png"
+                                            BorderColor="Black"
+                                            BorderWidth="2"
+                                            Clicked="bf5button_Clicked"/>
+                                    </Grid>
+                                </ScrollView>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Border>
+            <Button
                 x:Name="ContinueButton"
-                Grid.Column="1"
-                Grid.Row="9"
-                Text="Continue"
+                Grid.ColumnSpan="2"
+                Grid.Row="5"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="        Continue  →      "
                 FontFamily="ArchivoBlack-Regular"
                 FontSize="25"
-                TextColor="Orange"
-                BackgroundColor="MediumPurple"
+                TextColor="#39236c"
+                BackgroundColor="#fdb861"
                 BorderWidth="2"
-                BorderColor="Orange"
+                BorderColor="#fce7c4"
                 CornerRadius="30"
                 Clicked="ContinueButton_Clicked"/>
 
-            </Grid>
-        </ScrollView>
+            <HorizontalStackLayout
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Spacing="240">
+                <Image
+                    Source="pointstar.png"
+                    HeightRequest="20"/>
+                <Image
+                    Source="pointstar.png"
+                    HeightRequest="20"/>
+
+            </HorizontalStackLayout>
+
+
+        </Grid>
 
     </Grid>
 
