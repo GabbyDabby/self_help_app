@@ -90,7 +90,7 @@ The character customization system has gone through several iterations as the vi
 
 ### Character Selection — Version 2
 
-<img width="233" height="480" alt="Character Selection V2" src="https://github.com/user-attachments/assets/b684fd59-dbdd-4579-9092-176cffecac85" />
+<img width="233" height="480" alt="RPGCharacterCreate3" src="https://github.com/user-attachments/assets/cab97e87-9b6f-4aef-8d9d-22abdd5be4bc" />
 
 ---
 
